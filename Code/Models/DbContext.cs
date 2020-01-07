@@ -1,4 +1,6 @@
-﻿namespace Hackathon.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Hackathon.Models
 {
     public class _DbContext : DbContext
     {

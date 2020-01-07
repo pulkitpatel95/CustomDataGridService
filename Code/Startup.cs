@@ -1,5 +1,4 @@
-﻿using Hackathon.CustomMiddleware;
-using Hackathon.Models;
+﻿using Hackathon.Models;
 using Hackathon.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
