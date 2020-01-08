@@ -124,8 +124,8 @@ namespace Hackathon.Controllers
                 var response = await prefService.GetHeadersAsync();
                 var currentPreferences = response.FirstOrDefault().PreferanceValue.ToString();
                 var newPreferences = currentPreferences.Replace(columnHeader + ":true", columnHeader + ":false");
-                var updateResponse = prefService.Update(1, newPreferences);
-                return Ok(updateResponse);
+                var updateResponse = await prefService.Update(1, newPreferences);
+                return Ok(response);
             }
             catch (Exception ex)
             {
@@ -144,8 +144,8 @@ namespace Hackathon.Controllers
                 var res = await prefService.GetHeadersAsync();
                 var currentPreferences = res.FirstOrDefault().PreferanceValue.ToString();
                 var newPreferences = currentPreferences.Replace(columnHeader + ":false" , columnHeader + ":true");
-                var response = prefService.Update(1, newPreferences);
-                return Ok(response);
+                var response = await prefService.Update(1, newPreferences);
+                return Ok(res);
             }
             catch (Exception ex)
             {
